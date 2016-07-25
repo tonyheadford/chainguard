@@ -1,11 +1,11 @@
-# Chainguard
+# Dibble
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'chainguard'
+gem 'dibble'
 ```
 
 And then execute:
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install chainguard
+    $ gem install dibble
 
 ## Usage
 
@@ -28,7 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tonyheadford/chainguard.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tonyheadford/dibble.
 
 
 ## License
