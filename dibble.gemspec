@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'chainguard/version'
+require 'dibble/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "chainguard"
-  spec.version       = Chainguard::VERSION
+  spec.name          = "dibble"
+  spec.version       = Dibble::VERSION
   spec.authors       = ["Tony Headford"]
   spec.email         = ["tony@binarycircus.com"]
 

@@ -1,5 +1,5 @@
-module Chainguard
-  class Sequencer
+module Dibble
+  class Sequence
     extend Forwardable
     def_delegators :@sequence, :first, :last, :include?
 
@@ -8,30 +8,22 @@ module Chainguard
       @steps = {}
     end
 
-    def step(name, options = {})
-      add_step(name.to_sym, options)
+    def add(name, options = {})
+      add_item(name.to_sym, options)
     end
 
-    def first_step
-      @sequence.first
-    end
-
-    def last_step
-      @sequence.last
-    end
-
-    def next_step(name, entity)
+    def next(name, entity)
       index = @sequence.index(name.to_sym)
-      find_next_step(@sequence.drop(index + 1), entity) unless index.nil?
+      find_next_item(@sequence.drop(index + 1), entity) unless index.nil?
     end
 
-    def prev_step(name, entity)
+    def prev(name, entity)
       index = @sequence.index(name.to_sym)
-      find_next_step(@sequence.take(index).reverse, entity) unless index.nil?
+      find_next_item(@sequence.take(index).reverse, entity) unless index.nil?
     end
 
   private
-    def find_next_step(ary, entity)
+    def find_next_item(ary, entity)
       item = nil
       ary.each do |name|
         options = @steps.fetch(name, {})
@@ -49,7 +41,7 @@ module Chainguard
       item
     end
 
-    def add_step(name, options)
+    def add_item(name, options)
       @sequence << name unless @sequence.include? name
       @steps[name] = options
     end
