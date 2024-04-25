@@ -1,3 +1,5 @@
+require "forwardable"
+
 module Dibble
   class Sequence
     extend Forwardable

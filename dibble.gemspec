@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Sequence things with optional conditions }
   spec.description   = %q{Provides the ability to link together a sequence of things with conditional guards}
-  spec.homepage      = "https://github.com/tonyheadford/chainguard"
+  spec.homepage      = "https://github.com/tonyheadford/dibble"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -28,8 +28,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
   spec.add_development_dependency "pry-byebug"
-  spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency "minitest"
 end
